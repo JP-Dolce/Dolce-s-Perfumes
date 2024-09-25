@@ -1,0 +1,24 @@
+html{
+    background-color: #13293D;
+    
+}
+a {
+    font-weight: bold;
+    color: inherit;
+}
+main{
+    padding-top: 20px;
+    background-color: #13293D;
+    color: #fff;
+}
+fieldset {
+    margin: 30px 50px 50px 50px;
+}
+.p-main{
+    padding: 20px;
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;  display: flex;
+  flex-direction: column;}

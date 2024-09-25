@@ -1,0 +1,15 @@
+<mat-toolbar>
+    <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/perfumes">Consultar</button>
+      <button mat-menu-item routerLink="/perfumes/create">Cadastrar</button>
+    </mat-menu>
+  <span><a href="">Dolce's Perfumes</a></span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="addToFavorites()">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="copyLink()">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>

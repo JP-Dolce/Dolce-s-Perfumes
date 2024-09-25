@@ -1,0 +1,30 @@
+# Ignorar arquivos do Node.js (Angular Frontend)
+node_modules/
+dist/
+*.log
+out-tsc/
+coverage/
+src/environments/
+
+# Ignorar arquivos e pastas do C#/.NET (Backend)
+bin/
+obj/
+*.user
+*.suo
+*.bak
+*.pdb
+*.vscode/
+*.log
+appsettings.json
+appsettings.Development.json
+packages/
+
+# Ignorar arquivos do SQL Server (Banco de Dados)
+*.bak
+*.mdf
+*.ldf
+
+# Configurações gerais e do sistema
+.DS_Store
+.idea/
+.vs/

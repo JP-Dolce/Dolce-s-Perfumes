@@ -1,0 +1,42 @@
+<app-header></app-header>
+<main> 
+    <fieldset><p class="p-main">Pesquisar Perfume</p></fieldset>
+    <div>
+        <form class="custom-form">
+            <label for="id">ID:</label>
+            <input type="number" id="id" name="id" [(ngModel)]="Id" (input)="onIdInput()" [disabled]="isIdDisabled" placeholder="Digite um ID">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" [(ngModel)]="Nome" (input)="onNameInput()" [disabled]="isNameDisabled" placeholder="Digite um Nome">
+            <div class="button-group">
+                <button type="button" (click)="definirPesquisa()" class="btn-primary">Pesquisar</button>
+                <button type="button" routerLink="/perfumes/create" class="btn-secondary">Novo</button>
+            </div>
+        </form>
+        
+    </div>
+    <table class="pure-table pure-table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Nome</th>
+                <th>Data Fab.</th>
+                <th>Data Venc.</th>
+                <th>Valor</th>
+                <th>Observações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let perfume of Perfumes">
+                <td><a [routerLink]="['/perfumes/edit', perfume.Id]">{{perfume.Id}}</a></td>
+                <td>{{perfume.Marca}}</td>
+                <td>{{perfume.Nome}}</td>
+                <td>{{perfume.DataFabricacao | date: 'dd/MM/yyyy'}}</td>
+                <td>{{perfume.DataVencimento | date: 'dd/MM/yyyy'}}</td>
+                <td>{{perfume.Valor}}</td>
+                <td><a [routerLink]="['/perfumes/edit', perfume.Id]">Editar</a></td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+<app-footer></app-footer>

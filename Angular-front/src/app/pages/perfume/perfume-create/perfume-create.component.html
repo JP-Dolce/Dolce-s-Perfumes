@@ -1,0 +1,57 @@
+<app-header></app-header>
+<main>
+    <fieldset><p class="p-main">Cadastrar Perfume</p></fieldset> 
+
+    <div class="example-container">
+        <form class="example-form">
+                    <div>
+                    <mat-form-field >
+                        <mat-label >Marca:</mat-label>
+                        <input matInput placeholder="Digite uma marca" id="marca" name="marca" [(ngModel)]="Perfume.Marca">
+                      </mat-form-field>
+                    </div>
+                    <div>
+                    <mat-form-field >
+                        <mat-label>Nome:</mat-label>
+                        <input matInput placeholder="Digite um Nome" id="nome" name="nome" [(ngModel)]="Perfume.Nome">
+                      </mat-form-field>
+                    </div>
+                    <div>
+                      <mat-form-field class="example-full-width">
+                        <mat-label >Data de Fabricação:</mat-label>
+                        <input matInput [matDatepicker]="picker" id="dtfab" name="dtfab" [(ngModel)]="Perfume.DataFabricacao">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker">
+                          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                    </div>
+                    <div>
+                      <mat-form-field class="example-full-width">
+                        <mat-label>Data de Vencimento:</mat-label>
+                        <input matInput [matDatepicker]="picker" id="dtvenc" name="dtvenc" [(ngModel)]="Perfume.DataVencimento">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker">
+                          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                    </div>
+                
+                      <mat-form-field floatLabel="always">
+                        <mat-label>Valor:</mat-label>
+                        <input matInput type="number" class="example-right-align" placeholder="0" name="valor" [(ngModel)]="Perfume.Valor">
+                        <span matTextPrefix>$&nbsp;</span>
+                        <span matTextSuffix>0.01</span>
+                      </mat-form-field>
+                      <div class="example-button-row">
+                        <button mat-stroked-button type="button" (click)="enviar()">Enviar</button>
+                        <button mat-stroked-button type="button" type="reset">Limpar</button>
+                        <button mat-stroked-button type="button" type="button" routerLink="/perfumes" >Voltar</button>
+                        </div>
+            
+        </form>
+    </div>
+</main>
+<app-footer></app-footer>
