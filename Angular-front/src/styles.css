@@ -1,7 +1,19 @@
 html, body {
   height: 100%;
   margin: 0;
-  padding: 0;
+  background-color: #13293D  !important; /* sua cor que tinha antes */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+app-container {
+  display: block;
+  min-height: calc(100vh - 120px);
+
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 app-root {
@@ -10,8 +22,22 @@ app-root {
   min-height: 100vh;
 }
 
-/* Onde o conteúdo vai crescer */
-.app-container-main {
-  flex: 1;
-  display: block;
+
+html {
+  background-color: #13293D;
+}
+
+a {
+  font-weight: bold;
+  color: inherit;
+}
+
+fieldset {
+  margin: 30px 50px 50px 50px;
+}
+
+.p-main {
+  padding: 20px;
+  font-size: 36px;
+  font-family: 'Times New Roman', Times, serif;
 }

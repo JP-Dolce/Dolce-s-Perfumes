@@ -2,6 +2,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  background-color: #e3f1f1;
 }
 
 .isolation {
